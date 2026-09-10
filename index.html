@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vida Financeira — Controle completo das suas finanças</title>
+<style>
+:root{
+ --navy:#173b63;--navy2:#102d4b;--blue:#2d6fae;--gold:#f2c75c;
+ --ink:#172333;--muted:#667085;--line:#e4e9ef;--bg:#f6f8fb;--cream:#fff5d5;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.55;background:#fff}
+.container{width:min(1120px,calc(100% - 40px));margin:auto}
+.hero{background:linear-gradient(135deg,var(--navy2),var(--navy));color:#fff;padding:28px 0 72px}
+.nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:65px}
+.logo{font-weight:800;letter-spacing:.4px;font-size:18px}.nav a{color:#fff;text-decoration:none;font-size:14px}
+.eyebrow{display:inline-block;border:1px solid #ffffff40;background:#ffffff12;border-radius:999px;padding:7px 12px;font-size:12px;font-weight:700;letter-spacing:.6px}
+h1{font-size:52px;line-height:1.05;letter-spacing:-1.5px;max-width:760px;margin:18px 0}
+.hero p{font-size:20px;max-width:700px;color:#e9f1f8;margin:0 0 28px}
+.btn{display:inline-block;background:var(--gold);color:#172333;text-decoration:none;font-weight:800;padding:15px 22px;border-radius:9px}
+.trust{font-size:13px;color:#d7e4ef;margin-top:12px}
+.hero-shot{margin-top:48px;background:#fff;padding:10px;border-radius:16px;box-shadow:0 22px 60px #071b2e66}
+.hero-shot img{width:100%;display:block;border-radius:9px}
+section{padding:76px 0}.light{background:var(--bg)}h2{font-size:35px;line-height:1.15;letter-spacing:-.6px;margin:0 0 14px}
+.lead{color:var(--muted);max-width:760px;font-size:17px}.center{text-align:center}.center .lead{margin:0 auto}
+.problem{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.list{padding:0;margin:25px 0 0;list-style:none}.list li{margin:13px 0;padding-left:28px;position:relative}.list li:before{content:"✓";position:absolute;left:0;font-weight:800;color:var(--blue)}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}
+.feature{padding:24px;border:1px solid var(--line);border-radius:14px;background:#fff}.feature .icon{font-size:27px}.feature h3{margin:10px 0 5px;font-size:18px}.feature p{margin:0;color:var(--muted);font-size:14px}
+.screens{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:38px}.shot{background:#fff;border:1px solid var(--line);border-radius:15px;padding:10px;box-shadow:0 8px 25px #0b254012}.shot img{width:100%;display:block;border-radius:8px}.shot h3{margin:14px 7px 3px}.shot p{margin:0 7px 8px;color:var(--muted);font-size:14px}
+.compare{width:100%;border-collapse:separate;border-spacing:0;margin-top:30px;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}.compare th,.compare td{padding:14px;border-bottom:1px solid var(--line);text-align:center}.compare th:first-child,.compare td:first-child{text-align:left}.compare th{background:var(--navy);color:#fff}.compare tr:last-child td{border-bottom:0}
+.offer{max-width:720px;margin:35px auto 0;background:#fff;border:1px solid var(--line);border-radius:18px;padding:42px;text-align:center;box-shadow:0 12px 35px #0b254018}.old{color:var(--muted);font-size:14px}.price{font-size:50px;line-height:1;font-weight:900;color:var(--navy);margin:8px 0 12px}.pay{font-weight:700}.offer ul{text-align:left;max-width:450px;margin:25px auto;padding-left:22px}.offer li{margin:8px 0}
+.faq{max-width:820px;margin:30px auto 0}.faq div{border-bottom:1px solid var(--line);padding:18px 0}.faq b{display:block;margin-bottom:5px}
+.final{background:var(--navy);color:#fff;text-align:center}.final p{color:#dce8f2;max-width:680px;margin:0 auto 25px}.final .btn{background:#fff}
+footer{background:#0d243c;color:#cbd9e5;text-align:center;font-size:12px;padding:25px 0}
+@media(max-width:800px){.container{width:min(100% - 28px,1120px)}h1{font-size:40px}.problem,.features,.screens{grid-template-columns:1fr}.nav{margin-bottom:45px}.hero{padding-bottom:45px}section{padding:55px 0}.offer{padding:28px 20px}}
+</style>
+
+<style>
+.free-offer{padding:60px 20px}
+.free-card{max-width:900px;margin:0 auto;padding:42px 30px;text-align:center;border-radius:18px;background:#f3f8f5;border:1px solid #d7e8de;box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.free-badge{display:inline-block;font-weight:800;font-size:13px;letter-spacing:1px;margin-bottom:12px}
+.free-card h2{margin:0 0 14px;font-size:34px;line-height:1.15}
+.free-card h2 span{font-weight:900}
+.free-card p{max-width:680px;margin:0 auto 24px;font-size:18px;line-height:1.55}
+.free-card .cta{display:inline-block;text-decoration:none}
+.free-note{font-size:13px!important;margin-top:14px!important;margin-bottom:0!important}
+@media(max-width:600px){
+  .free-offer{padding:40px 15px}
+  .free-card{padding:30px 20px}
+  .free-card h2{font-size:28px}
+}
+</style>
+
+</head>
+<body>
+
+<header class="hero">
+<div class="container">
+<div class="nav"><div class="logo">VIDA FINANCEIRA</div><a href="#premium">Conheça a Premium ↓</a></div>
+<div class="eyebrow">VIDA FINANCEIRA • PREMIUM</div>
+<h1>Tenha controle completo da sua vida financeira.</h1>
+<p>Controle gastos, cartões, contas, investimentos, metas e patrimônio em uma única ferramenta.</p>
+<a class="btn" href="https://sun.eduzz.com/E0DK6PZD91" target="_blank" rel="noopener noreferrer">QUERO A PREMIUM</a>
+<div class="trust">Pagamento único • Sem mensalidade • Entrega digital</div>
+<div class="hero-shot"><img src="assets/page-3.png" alt="Dashboard da Vida Financeira"></div>
+</div>
+</header>
+
+<section>
+<div class="container problem">
+<div>
+<h2>Você sabe exatamente para onde seu dinheiro está indo?</h2>
+<p class="lead">Quando suas informações financeiras ficam espalhadas, fica difícil enxergar o todo.</p>
+<ul class="list">
+<li>Quanto você gastou neste mês?</li>
+<li>Quanto conseguiu guardar?</li>
+<li>Quanto está comprometido no cartão?</li>
+<li>Quanto tem investido?</li>
+<li>Seu patrimônio está crescendo?</li>
+</ul>
+</div>
+<div class="feature">
+<div class="icon">💡</div><h3>Uma visão clara em um só lugar</h3>
+<p>A VIDA FINANCEIRA organiza suas principais informações e transforma seus registros em indicadores fáceis de acompanhar mês a mês.</p>
+</div>
+</div>
+</section>
+
+<section class="light" id="premium">
+<div class="container center">
+<h2>Uma ferramenta completa para sua vida financeira</h2>
+<p class="lead">Tudo conectado em um só lugar, sem precisar manter várias planilhas diferentes.</p>
+<div class="features">
+<div class="feature"><div class="icon">💰</div><h3>Receitas e despesas</h3><p>Registre seus ganhos e gastos e acompanhe seu resultado mensal.</p></div>
+<div class="feature"><div class="icon">📊</div><h3>Dashboard</h3><p>Veja resultado e taxa de poupança de cada mês.</p></div>
+<div class="feature"><div class="icon">💳</div><h3>Cartões</h3><p>Controle compras parceladas, faturas e parcelas futuras.</p></div>
+<div class="feature"><div class="icon">🏦</div><h3>Contas</h3><p>Acompanhe contas, saldos, receitas e despesas.</p></div>
+<div class="feature"><div class="icon">📈</div><h3>Investimentos</h3><p>Acompanhe valores, rentabilidade e peso da carteira.</p></div>
+<div class="feature"><div class="icon">💎</div><h3>Patrimônio</h3><p>Veja ativos, passivos e patrimônio líquido.</p></div>
+<div class="feature"><div class="icon">🎯</div><h3>Metas</h3><p>Defina objetivos financeiros e acompanhe o progresso.</p></div>
+<div class="feature"><div class="icon">🧮</div><h3>Simuladores</h3><p>Faça simulações de investimentos e metas.</p></div>
+<div class="feature"><div class="icon">📅</div><h3>Planejamento</h3><p>Compare orçamento e realizado por categoria.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2 class="center">Veja a ferramenta por dentro</h2>
+<p class="lead center">As imagens abaixo são da própria versão Premium que você receberá.</p>
+<div class="screens">
+<div class="shot"><img src="assets/page-6.png"><h3>💳 Cartões de crédito</h3><p>Compras parceladas, fatura estimada e parcelas futuras.</p></div>
+<div class="shot"><img src="assets/page-13.png"><h3>📈 Investimentos</h3><p>Valor investido, valor atual, rentabilidade e peso na carteira.</p></div>
+<div class="shot"><img src="assets/page-14.png"><h3>💎 Patrimônio</h3><p>Acompanhe ativos, passivos e patrimônio líquido.</p></div>
+<div class="shot"><img src="assets/page-15.png"><h3>🎯 Metas financeiras</h3><p>Defina objetivos e acompanhe seu progresso.</p></div>
+<div class="shot"><img src="assets/page-17.png"><h3>🧮 Simuladores</h3><p>Simule investimentos e planejamento de metas.</p></div>
+<div class="shot"><img src="assets/page-18.png"><h3>📅 Planejamento mensal</h3><p>Compare o orçamento com o que foi realizado.</p></div>
+<div class="shot"><img src="assets/page-19.png"><h3>📈 Histórico patrimonial</h3><p>Visualize a evolução do seu patrimônio ao longo do tempo.</p></div>
+</div>
+</div>
+</section>
+
+<section class="light">
+<div class="container">
+<h2 class="center">Comece grátis ou tenha todos os recursos</h2>
+<table class="compare">
+<tr><th>Recurso</th><th>FREE</th><th>PREMIUM</th></tr>
+<tr><td>Receitas e despesas</td><td>✓</td><td>✓</td></tr>
+<tr><td>Dashboard mensal</td><td>✓</td><td>✓</td></tr>
+<tr><td>Cartões e parcelamentos</td><td>—</td><td>✓</td></tr>
+<tr><td>Contas e saldos</td><td>—</td><td>✓</td></tr>
+<tr><td>Investimentos</td><td>—</td><td>✓</td></tr>
+<tr><td>Patrimônio líquido</td><td>—</td><td>✓</td></tr>
+<tr><td>Metas, simuladores e planejamento</td><td>—</td><td>✓</td></tr>
+<tr><td>Histórico patrimonial</td><td>—</td><td>✓</td></tr>
+</table>
+</div>
+</section>
+
+
+<section class="free-offer" id="free">
+  <div class="container">
+    <div class="free-card">
+      <div class="free-badge">VERSÃO GRATUITA</div>
+      <h2>Experimente o Vida Financeira <span>grátis</span></h2>
+      <p>Comece agora a organizar suas receitas e despesas com a versão FREE. Sem cartão e sem compromisso.</p>
+      <a class="cta" href="downloads/vida_financeira_FREE.xlsx" download>BAIXAR A VERSÃO FREE</a>
+      <p class="free-note">Arquivo Excel (.xlsx) • Download gratuito</p>
+    </div>
+  </div>
+</section>
+
+<section id="oferta">
+<div class="container">
+<div class="offer">
+<div class="eyebrow" style="color:var(--navy);border-color:#dbe4ec;background:#f7fafc">OFERTA PREMIUM</div>
+<h2>Tenha a VIDA FINANCEIRA completa</h2>
+<div class="price">R$ 29,90</div>
+<div class="pay">Pagamento único • Sem mensalidade</div>
+<ul>
+<li>Versão Premium completa</li>
+<li>Cartões e compras parceladas</li>
+<li>Contas e saldos</li>
+<li>Investimentos e patrimônio</li>
+<li>Metas, simuladores e planejamento</li>
+<li>Histórico patrimonial</li>
+</ul>
+<a class="btn" href="https://sun.eduzz.com/E0DK6PZD91" target="_blank" rel="noopener noreferrer">QUERO A PREMIUM POR R$ 29,90</a>
+<div class="trust" style="color:var(--muted)">Você será direcionado ao checkout seguro da Eduzz.</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2 class="center">Perguntas frequentes</h2>
+<div class="faq">
+<div><b>Preciso saber Excel?</b>Não. A ferramenta já vem estruturada e você preenche os campos indicados.</div>
+<div><b>Existe mensalidade?</b>Não. A Premium é uma compra única.</div>
+<div><b>Posso personalizar categorias e contas?</b>Sim. A Premium possui uma área de Configurações.</div>
+<div><b>Funciona no celular?</b>O uso em computador ou notebook é recomendado para aproveitar melhor todos os recursos.</div>
+<div><b>O que recebo após a compra?</b>Você receberá a versão Premium da VIDA FINANCEIRA em formato Excel.</div>
+</div>
+</div>
+</section>
+
+<section class="final">
+<div class="container">
+<h2>Comece a organizar sua vida financeira</h2>
+<p>Tenha uma visão mais clara dos seus gastos, cartões, investimentos e patrimônio.</p>
+<a class="btn" href="https://sun.eduzz.com/E0DK6PZD91" target="_blank" rel="noopener noreferrer">QUERO A PREMIUM</a>
+</div>
+</section>
+
+<footer>VIDA FINANCEIRA • Controle, clareza e organização para sua vida financeira.</footer>
+</body>
+</html>
