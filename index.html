@@ -225,7 +225,82 @@
       .feature-grid, .demo-grid { grid-template-columns: 1fr; gap: 13px; }
       .feature-card { min-height: 0; padding: 21px; }
       .demo-caption { padding: 14px 15px 16px; }
-      .compare th, .compare td { padding: 12px 13px; font-size: 12px; }
+      /* No celular, cada recurso vira um cartão sem rolagem horizontal. */
+      .table-wrap {
+        overflow: visible;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+      .compare {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        border-collapse: separate;
+        border-spacing: 0;
+      }
+      .compare thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      .compare tbody {
+        display: grid;
+        gap: 11px;
+      }
+      .compare tbody tr {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: #fff;
+        box-shadow: 0 5px 16px rgba(16, 43, 71, .045);
+      }
+      .compare td {
+        min-width: 0;
+        padding: 11px 10px;
+        border: 0;
+        font-size: 13px;
+      }
+      .compare td:first-child {
+        grid-column: 1 / -1;
+        width: auto;
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--line);
+        background: var(--blue-soft);
+        color: var(--ink);
+        font-size: 14px;
+        font-weight: 800;
+        text-align: left;
+      }
+      .compare td:nth-child(2),
+      .compare td:nth-child(3) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        text-align: center;
+      }
+      .compare td:nth-child(2)::before,
+      .compare td:nth-child(3)::before {
+        color: var(--muted);
+        font-size: 10px;
+        font-weight: 850;
+        letter-spacing: .07em;
+      }
+      .compare td:nth-child(2)::before { content: "FREE"; }
+      .compare td:nth-child(3)::before { content: "PREMIUM"; }
+      .compare .yes { font-size: 19px; }
+      .compare .no { font-size: 16px; }
       .free-card { padding: 31px 21px; }
       .free-card p { font-size: 14px; }
       .free-card .btn { width: 100%; }
@@ -364,7 +439,7 @@
           <h2>Comece grátis ou tenha todos os recursos</h2>
           <p>Experimente o controle básico com a versão FREE ou amplie sua organização com a Premium.</p>
         </div>
-        <div class="table-wrap" role="region" aria-label="Comparação entre as versões FREE e Premium" tabindex="0">
+        <div class="table-wrap" role="region" aria-label="Comparação entre as versões FREE e Premium">
           <table class="compare">
             <thead><tr><th scope="col">Recurso</th><th scope="col">FREE</th><th scope="col">PREMIUM</th></tr></thead>
             <tbody>
